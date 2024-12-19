@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.bienvenida{
+    padding-top: 2.5rem;
+    width: 100%;
+    background-color: black;
+}
+
+.texto1{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.texto2{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-style: italic;
+    text-align: center;
+    padding-top: 3rem;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    background: black;
+    padding-bottom: 11rem;
+}
+
+.time-box {
+    text-align: center;
+}
+
+.number {
+    font-size: 7.5rem;
+    font-weight: bold;
+    color: white;
+    display: block;
+}
+
+.label {
+    font-size: 3.2rem;
+    color: white;
+}
+
+.ceremonia-container{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.icono1{
+    width:20%;
+    text-align:center;
+    background-color: white;
+}
+
+.ceremonia-title{
+    background-color: white;
+    font-size: 6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+ }
+
+ .ceremonia-text{
+     background-color: white;
+     font-size: 3rem;
+     font-family: 'Montserrat', sans-serif;
+     padding: 0.5rem;
+
+ }
+
+ .direccion{
+         background-color: white;
+         font-family: 'Montserrat', sans-serif;
+         color: black;
+         font-size: 3rem;
+         text-decoration: none;
+         border: 1px solid black;
+         border-radius: 3rem;
+         padding: 1rem;
+
+ }
+
+ .extra-text{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+
+ }
+
+ .extra-text-desp{
+    text-align:left;
+    color: white;
+    font-size: 3rem;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 5rem;
+ }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/imagenes/faviconsym.png">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Sofi & Maxi</title>
+</head>
+<body>
+    <img src="/imagenes/fotoinicial2.png" alt="imagen de inicio" width="100%">
+    <div class="bienvenida">
+        <p class="texto1">24 de Mayo 2025</p>
+        <p class="texto2">Empezamos la cuenta regresiva!</p>
+    </div>
+
+    <div class="countdown">
+        <div class="time-box">
+            <span class="number" id="days">0</span>
+            <span class="label">Días</span>
+        </div>
+        <div class="time-box">
+            <span class="number" id="hours">0</span>
+            <span class="label">Horas</span>
+        </div>
+        <div class="time-box">
+            <span class="number" id="minutes">0</span>
+            <span class="label">Minutos</span>
+        </div>
+        <div class="time-box">
+            <span class="number" id="seconds">0</span>
+            <span class="label">Segundos</span>
+        </div>
+    </div>
+    <div class="ceremonia-container">
+        <img src="/imagenes/recien-casados.png" alt="Icono de recién casados" class="icono1">
+        <p class="ceremonia-title">Ceremonia</p>
+        <p class="ceremonia-text">Jardines de Roldan</p>
+        <p class="ceremonia-text">Los Molinos 2105, Roldán</p>
+        <p class="ceremonia-text">18:00 hs</p>
+        <br>
+        <a class="direccion" href="https://www.google.com/maps/place/Jardines+de+Rold%C3%A1n/@-32.9091313,-60.8930711,17z/data=!3m1!4b1!4m6!3m5!1s0x95b64b5573f98b15:0x7f7b4f90a36cf26d!8m2!3d-32.9091313!4d-60.8930711!16s%2Fg%2F11v78f8s56?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+            COMO LLEGAR
+        </a>
+
+    </div>
+    <div class="ceremonia-container">
+        <img src="/imagenes/fiestaicono.png" alt="Icono de fiesta" class="icono1">
+        <p class="ceremonia-title">Fiesta</p>
+        <p class="ceremonia-text">Jardines de Roldan</p>
+        <p class="ceremonia-text">Los Molinos 2105, Roldán</p>
+        <p class="ceremonia-text">18:00 hs</p>
+        <br>
+        <a class="direccion" href="https://www.google.com/maps/place/Jardines+de+Rold%C3%A1n/@-32.9091313,-60.8930711,17z/data=!3m1!4b1!4m6!3m5!1s0x95b64b5573f98b15:0x7f7b4f90a36cf26d!8m2!3d-32.9091313!4d-60.8930711!16s%2Fg%2F11v78f8s56?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+            INFO IMPORTANTE AQUI
+        </a>
+    </div>
+    <div>
+        <p class="extra-text">Algunas dudas?</p>
+        <p class="extra-text">Aca dejamos todos los detalles...</p>
+        <details class="extra-text-desp">
+            <summary><strong>Dresscode</strong></summary>
+            <p>Nosotros vamos a estar muy facheros!</p>
+            <p>Entonces, el dresscode es elegante sport</p>
+            <p>Aclaracion: no colores blanco, nude, crema, azules y celestes</p>
+        </details>
+        <details class="extra-text-desp">
+            <summary><strong>Regalo</strong></summary>
+            <p>CBU:</p>
+        </details>
+
+    </div>
+    <script>
+        function updateCountdown() {
+            const eventDate = new Date("2025-05-24T00:00:00");
+            const now = new Date();
+            const timeRemaining = eventDate - now;
+
+            if (timeRemaining > 0) {
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                document.getElementById("days").textContent = days;
+                document.getElementById("hours").textContent = hours;
+                document.getElementById("minutes").textContent = minutes;
+                document.getElementById("seconds").textContent = seconds;
+            } else {
+                document.querySelector(".countdown").textContent = "¡Es el gran día!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+
+
+</body>
+</html>
