@@ -110,3 +110,47 @@
     font-family: 'Montserrat', sans-serif;
     padding-left: 5rem;
  }
+
+ .frase{
+    font-weight: bold;
+ }
+
+ .coloresno{
+    width: 90%;
+    text-align: center;
+    padding-top: 1.5rem;
+ }
+
+ .confirmacion{
+    background-color: white;
+ }
+
+ .confirmacion-text{
+    color: black;
+    font-size: 3rem;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 3.5rem;
+    font-style: italic;
+    text-align: center;
+ }
+
+ .confirmation-form{
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 3rem;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 3rem;
+    padding: 1rem;
+    margin: 6rem;
+ }
+
+ .final p{
+   font-family: 'Montserrat', sans-serif;
+   color: white;
+   font-size: 4rem;
+   text-align: center;
+   font-weight: bold;
+ }
