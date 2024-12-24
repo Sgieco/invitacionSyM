@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/imagenes/faviconsym.png">
+    <link rel="stylesheet" href="/css/fiesta.css">
+    <title>Sofi & Maxi</title>
+</head>
+<body>
+    <img src="/imagenes/BRESHmys.png" alt="banner bresh" class="banner">
+    <div class="contenedor-fiesta">
+        <p class="msj1">Te adelantamos un poco de lo que se viene!</p>
+        <p class="msj2">Calentamos los motores en:</p>
+        <a class="insta" href="https://www.instagram.com/symbresh/" target="_blank" rel="noopener noreferrer"> @symbresh </a>
+        <p class="msj3">Brillos, Colores y Hitazos como este: </p>
+
+        <div class="video-container">
+            <iframe
+                    class="audio-player"
+                    src="https://www.youtube.com/embed/CCF1_jI8Prk"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <p class="msj4">Queremos que bailes toda la noche</p>
+        <a class="canciones" href="https://docs.google.com/forms/d/e/1FAIpQLScz2vjoec6vYCGKZStLrqw2QaSuWSQJVuGW532Ic6MztVMjdg/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+            SUGERI TUS CANCIONES
+        </a>
+        <p class="msj5">Unos dias antes, vamos a compartir la PlayList final para que vayas practicando los pasos</p>
+    </div>
+
+    <script>
+        function showAudio() {
+            var iframe = document.getElementById('audio-player');
+            iframe.style.display = 'block'; // Muestra el iframe
+            var button = document.querySelector('.play-button');
+            button.style.display = 'none'; // Oculta el botón de reproducción
+        }
+    </script>
+</body>
+</html>

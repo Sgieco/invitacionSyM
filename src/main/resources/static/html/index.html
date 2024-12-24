@@ -34,6 +34,19 @@
             <span class="label">Segundos</span>
         </div>
     </div>
+
+    <div class="audio-player-container">
+        <button id="play-button" class="play-button">Play - Lover -</button>
+
+        <div class="progress-container">
+            <input type="range" id="progress-bar" class="progress-bar" value="0" step="1" max="100">
+        </div>
+
+        <div class="video-container" style="display:none">
+            <iframe id="audio-iframe" class="audio-iframe" src="https://www.youtube.com/embed/-BjZmE2gtdo?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
     <div class="ceremonia-container">
         <img src="/imagenes/recien-casados.png" alt="Icono de recién casados" class="icono1">
         <p class="ceremonia-title">Civil</p>
@@ -53,7 +66,7 @@
         <p class="ceremonia-text">Los Molinos 2105, Roldán</p>
         <p class="ceremonia-text">18:00 hs</p>
         <br>
-        <a class="direccion" href="https://www.google.com/maps/place/Jardines+de+Rold%C3%A1n/@-32.9091313,-60.8930711,17z/data=!3m1!4b1!4m6!3m5!1s0x95b64b5573f98b15:0x7f7b4f90a36cf26d!8m2!3d-32.9091313!4d-60.8930711!16s%2Fg%2F11v78f8s56?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+        <a class="direccion" href="/html/fiesta.html" rel="noopener noreferrer">
             INFO IMPORTANTE AQUI
         </a>
     </div>
@@ -84,6 +97,7 @@
     <div class="final">
         <p>GRACIAS!</p>
     </div>
+
     <script>
         function updateCountdown() {
             const eventDate = new Date("2025-05-24T00:00:00");
@@ -107,6 +121,69 @@
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
+
+        const playButton = document.getElementById("play-button");
+        const progressBar = document.getElementById("progress-bar");
+        let player;
+
+        // Cargar la API de YouTube para controlar el iframe
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('audio-iframe', {
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        // Cuando el reproductor está listo, añade el evento al botón
+        function onPlayerReady(event) {
+            playButton.addEventListener("click", togglePlayPause);
+        }
+
+        // Control de play/pause
+        function togglePlayPause() {
+            if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+                player.pauseVideo();
+                playButton.textContent = "Play";
+            } else {
+                player.playVideo();
+                playButton.textContent = "Pause";
+            }
+        }
+
+        // Cuando el estado del reproductor cambia (play, pause, etc.)
+        function onPlayerStateChange(event) {
+            // Si el video termina, cambia el texto del botón a "Play"
+            if (event.data === YT.PlayerState.ENDED) {
+                playButton.textContent = "Play";
+            }
+        }
+
+        // Actualizar la barra de progreso
+        function updateProgressBar() {
+            if (player) {
+                const currentTime = player.getCurrentTime();
+                const duration = player.getDuration();
+                const progress = (currentTime / duration) * 100;
+                progressBar.value = progress;
+            }
+        }
+
+        // Sincronizar barra de progreso
+        setInterval(updateProgressBar, 1000);
+
+        // Reajustar progreso de la canción cuando se mueva la barra
+        progressBar.addEventListener("input", function() {
+            const newTime = (progressBar.value / 100) * player.getDuration();
+            player.seekTo(newTime);
+        });
+
+        // Cargar la API de YouTube
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     </script>
 
 
