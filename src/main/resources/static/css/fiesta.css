@@ -104,3 +104,9 @@ body {
     border: none;
     border-radius: 10px;
 }
+
+@media (min-width: 992px){
+    .video-container{
+         margin: 1rem 5rem;
+    }
+}

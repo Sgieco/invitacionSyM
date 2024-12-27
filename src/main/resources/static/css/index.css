@@ -223,3 +223,18 @@
      border: none;
      border-radius: 10px;
  }
+
+ @media (min-width: 992px) {
+
+    .audio-player-container {
+        margin-left: 30%;
+    }
+
+    .confirmation-form{
+        margin:25%;
+    }
+
+    .confirm{
+        margin-left:-5%;
+    }
+ }
