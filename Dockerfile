@@ -5,7 +5,7 @@ FROM eclipse-temurin:20-jdk
 WORKDIR /app
 
 # Copiar el archivo JAR generado en target a la carpeta del contenedor
-COPY target/*.jar app.jar
+COPY target/SyM-0.0.1-SNAPSHOT.jar app.jar
 
 # Exponer el puerto 8080 (puedes cambiarlo si tu app usa otro puerto)
 EXPOSE 8080
