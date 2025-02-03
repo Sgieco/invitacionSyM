@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.invitacion.SyM.SyMApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.680 s -- in com.invitacion.SyM.SyMApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.828 s -- in com.invitacion.SyM.SyMApplicationTests
