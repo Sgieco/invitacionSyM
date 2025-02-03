@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightpink;
+}
+
+.banner{
+    width: 100%;
+    margin:0;
+    padding:0;
+    border:none;
+    display:block;
+}
+
+.msj1{
+     font-family: 'Montserrat', sans-serif;
+     text-align: center;
+     font-size: 4.5rem;
+     padding-top: 0.5rem;
+     font-weight: bold;
+     color: white;
+
+}
+
+.msj2{
+     font-family: 'Montserrat', sans-serif;
+     text-decoration: none;
+     display: block;
+     font-size: 3.5rem;
+     color: white;
+     text-align: center;
+     font-weight: bold;
+ }
+
+ .msj3{
+     font-family: 'Montserrat', sans-serif;
+     color: white;
+     text-align: center;
+     font-size: 4rem;
+     font-weight: bold;
+ }
+
+ .canciones{
+      text-decoration: none;
+      color: #ad1457;
+      font-size: 3rem;
+      text-align: center;
+      display: block;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      border: 1px solid #ad1457;
+      border-radius: 10rem;
+      margin: 4rem;
+      padding: 2rem;
+ }
+
+ .insta{
+    text-decoration: none;
+    color: #ad1457;
+    font-size: 3rem;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .msj4{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 1rem;
+ }
+
+ .msj5{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0rem 6rem 0rem 6rem;
+    margin: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 90%;
+    height: 0;
+    padding-bottom: 56.25%; /* Esto mantiene una relación de aspecto 16:9 */
+    margin-top: 20px;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 3.5rem; /* Ajusta el margen si es necesario */
+    max-width: 100%; /* Asegura que no se exceda el ancho del contenedor */
+}
+
+.audio-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+@media (min-width: 992px){
+    .video-container{
+         margin: 1rem 5rem;
+    }
+}
